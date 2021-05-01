@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class game {
+
+    public static double GCD(double M,double K){
+       if(K==0)
+           return M;
+       else
+           return GCD(K, M % K);
+
+   }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+         System.out.println(" Enter the first two numbers: ");
+        int M=scan.nextInt();
+        int K=scan.nextInt();
+         System.out.println("GCD: "+GCD(M,K));
+         Scanner sc = new Scanner(System.in);
+       
+
+
+        if(M/GCD(M,K)%2!=0){
+            System.out.println("First player wins ");
+        }
+        else
+        System.out.println(" Second player wins");
+    }
+
+}
